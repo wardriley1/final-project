@@ -72,3 +72,11 @@ form {
   gap: 2rem;
   width: 40vw;
 }
+
+footer {
+  background-color: black;
+  color: aliceblue;
+  padding: 2rem;
+  margin-top: 66vh;
+  text-align: center;
+}

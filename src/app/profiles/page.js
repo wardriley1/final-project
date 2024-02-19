@@ -11,6 +11,7 @@ export default async function Profiles() {
    
     return (
       <div>
+        <h1>Profiles</h1>
         {!userId && (
           <div>
             <h2>Please sign up/in to view user reviews</h2>
@@ -26,7 +27,6 @@ export default async function Profiles() {
     
         {userId && (
           <div>
-            <h1>Profiles</h1>
             {profiles.rows.map((profile) => (
               <Link key={profile.id} href={`/profiles/${profile.id}/reviews`}>
                 <h3>{profile.username}</h3>

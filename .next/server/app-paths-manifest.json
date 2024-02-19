@@ -1,8 +1,8 @@
 {
-  "/profiles/[profilesId]/reviews/page": "app/profiles/[profilesId]/reviews/page.js",
-  "/profiles/[profilesId]/reviews/[reviewid]/page": "app/profiles/[profilesId]/reviews/[reviewid]/page.js",
+  "/page": "app/page.js",
+  "/profiles/page": "app/profiles/page.js",
   "/profiles/[profilesId]/reviews/[reviewid]/edit/page": "app/profiles/[profilesId]/reviews/[reviewid]/edit/page.js",
   "/profiles/[profilesId]/reviews/[reviewid]/comments/[commentid]/edit/page": "app/profiles/[profilesId]/reviews/[reviewid]/comments/[commentid]/edit/page.js",
-  "/page": "app/page.js",
-  "/profiles/page": "app/profiles/page.js"
+  "/about/page": "app/about/page.js",
+  "/profiles/[profilesId]/reviews/page": "app/profiles/[profilesId]/reviews/page.js"
 }
