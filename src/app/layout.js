@@ -1,28 +1,45 @@
-import { Inter } from "next/font/google";
-import { Theme } from '@radix-ui/themes';
-import Header from "@/app/components/Header";
+import Link from "next/link";
 import "./globals.css";
+import { ClerkProvider, UserButton, auth } from "@clerk/nextjs";
+import { sql } from "@vercel/postgres";
+import CreateProfile from "./components/CreateProfile";
 
-const inter = Inter({ subsets: ["latin"] });
+
+
+
+
+
 
 export const metadata = {
   title: "Album Reviews",
-  description: "Album reviews you can trust",
+  description: "Album Reviews you can trust",
 };
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <>
-        
-          <Header/>
+export default async function RootLayout({ children }) {
+  const { userId } = auth();
 
-          <div id="wrapper">
-        {children}
-        </div>
-        </>
-      </body>
-    </html>
+  const profileRes =
+    await sql`SELECT * FROM profiles WHERE clerk_user_id = ${userId}`;
+
+
+  return (
+    <ClerkProvider>
+      <html lang="en">
+        <body>
+        <header>ALBUM REVIEWS</header>
+        <nav>
+     <Link href ="/">HOME</Link> | <Link href ="/about">ABOUT</Link> 
+   </nav>
+        {!userId && <div><Link href="/sign-in">Sign In</Link>{children}</div>}
+        {userId && <UserButton afterSignOutUrl="/" />}
+        {userId && profileRes.rowCount === 0 && <CreateProfile />}
+        {userId && profileRes.rowCount !== 0 && children}
+        <div>
+     <footer>Property of Myles Artur Danny Reily &copy;</footer>
+       </div>
+        </body>
+      </html>
+    </ClerkProvider> 
   );
+
 }
