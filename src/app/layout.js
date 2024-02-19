@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import { Theme } from '@radix-ui/themes';
-import TopMenu from "@/app/components/TopMenu";
 import Header from "@/app/components/Header";
 import "./globals.css";
 
@@ -18,7 +17,7 @@ export default function RootLayout({ children }) {
         <>
         
           <Header/>
-          <TopMenu/>
+
           <div id="wrapper">
         {children}
         </div>
