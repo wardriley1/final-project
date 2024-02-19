@@ -96,10 +96,10 @@ export default async function ProfilePage({ params }) {
   <h1>Reviews</h1>
   {reviews.rows.map((review) => (
     <div key={review.id} id="rev-div">
-      <h3>ALBUM TITLE:</h3>
-      <p>{review.album_title}</p>
-      <h3>ALBUM ARTIST:</h3>
-      <p>{review.album_artist}</p>    
+      <p>ALBUM TITLE:</p>
+      <h3>{review.album_title}</h3>
+      <p>ALBUM ARTIST:</p>
+      <h3>{review.album_artist}</h3>    
       <Link href={`/profiles/${params.profilesId}/reviews/${review.id}`}>
     <h3>Read Review ...</h3>
     </Link>
