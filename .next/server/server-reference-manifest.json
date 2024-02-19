@@ -1,1 +1,16 @@
-{"node":{},"edge":{},"encryptionKey":"Hdj/dYmKSdOlQrAEkWoG1WR9eVxuI667XEga7Bx5UtQ="}
+{
+  "node": {
+    "88b7b4854171d28219111eee15b0aaba9ad5825f": {
+      "workers": {
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmylesbillington%2FDesktop%2Fproject-again%2Ffinal-project%2Fsrc%2Fapp%2Fcomponents%2FCreateProfile.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!",
+        "app/about/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmylesbillington%2FDesktop%2Fproject-again%2Ffinal-project%2Fsrc%2Fapp%2Fcomponents%2FCreateProfile.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/page": "rsc",
+        "app/about/page": "rsc"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "6a1ao5+dp6GHF0jlJRENXxirHU2PCEmSzv86PRaJtjY="
+}
