@@ -1,4 +1,4 @@
-import sql from "sql"
+import { sql } from "@vercel/postgres";
 
 export default async function Home() {
   const reviews = await sql`SELECT * FROM reviews`;
@@ -7,9 +7,9 @@ export default async function Home() {
     <h2>Home</h2>
     <h3>This is home</h3>
     <ul>
-      {reviews.rows.map((review) => {
-        <li key = {review.id}>{review.Album_title}</li>
-})}
+      {reviews.rows.map((review) => (
+        <p key={review.id}>{review.album_title}</p>
+      ))}
     </ul>
     </div>
   )
