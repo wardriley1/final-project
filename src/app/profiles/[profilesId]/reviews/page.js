@@ -99,11 +99,10 @@ export default async function ProfilePage({ params }) {
       <h3>ALBUM TITLE:</h3>
       <p>{review.album_title}</p>
       <h3>ALBUM ARTIST:</h3>
-      <p>{review.album_artist}</p>
-      <h3>ALBUM SCORE:</h3>
-      <p>{review.album_score}</p>
-      <h3>ALBUM REVIEW:</h3>
-      <p>{review.album_review}</p>
+      <p>{review.album_artist}</p>    
+      <Link href={`/profiles/${params.profilesId}/reviews/${review.id}`}>
+    <h3>Read Review ...</h3>
+    </Link>
     </div>
   ))}
 </div>
@@ -112,3 +111,4 @@ export default async function ProfilePage({ params }) {
 
               
 }
+

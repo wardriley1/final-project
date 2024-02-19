@@ -6,25 +6,35 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/about/page": [
+    "/profiles/[profilesId]/reviews/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/about/page.js"
-    ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/profiles/[profilesId]/reviews/page.js"
     ],
     "/profiles/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/profiles/page.js"
     ],
-    "/profiles/[profilesId]/reviews/page": [
+    "/profiles/[profilesId]/reviews/[reviewid]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/profiles/[profilesId]/reviews/page.js"
+      "static/chunks/app/profiles/[profilesId]/reviews/[reviewid]/page.js"
+    ],
+    "/profiles/[profilesId]/reviews/[reviewid]/edit/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/profiles/[profilesId]/reviews/[reviewid]/edit/page.js"
+    ],
+    "/profiles/[profilesId]/reviews/[reviewid]/comments/[commentid]/edit/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/profiles/[profilesId]/reviews/[reviewid]/comments/[commentid]/edit/page.js"
+    ],
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
     ]
   }
 }
