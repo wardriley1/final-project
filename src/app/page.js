@@ -1,3 +1,5 @@
+import sql from "sql"
+
 export default async function Home() {
   const reviews = await sql`SELECT * FROM reviews`;
   return (
@@ -6,7 +8,7 @@ export default async function Home() {
     <h3>This is home</h3>
     <ul>
       {reviews.rows.map((review) => {
-        <li key = {review.id}>{review.album_title}</li>
+        <li key = {review.id}>{review.Album_title}</li>
 })}
     </ul>
     </div>
