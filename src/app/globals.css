@@ -1,8 +1,15 @@
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+ 
+  color: black;
+  
+}
+
+
+.cl-userButtonTrigger {
+  margin-left: 30px;
+  margin-top: 1px;
+
 }
 
 body {
@@ -20,8 +27,23 @@ svg {
   display: block;
 }
 
-p, h1, h2, h3, h4 {
+p, h1, h3, h4 {
   color: black;
+}
+
+
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.clerkbutton {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1px;
 }
 
 h1.head {
@@ -32,8 +54,18 @@ h1 {
   font-size: 2rem;;
 }
 
-h2 {
-  margin-bottom: 40px;
+.clear {
+  clear: both;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 1px;
+  
+  font-weight: 900;
 }
 
 p {

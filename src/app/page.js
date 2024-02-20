@@ -1,11 +1,17 @@
 import { sql } from "@vercel/postgres";
+import { motion } from "framer-motion"
 
 export default async function Home() {
   const reviews = await sql`SELECT * FROM reviews`;
   return (
-    <div>
-    <h2>Home</h2>
-    <h3>This is home</h3>
+    <>
+
+    <p>random text</p>
+    <div className="homepage">
+    <h2>HOME</h2>
+    
+    <h3>This is home, dude!</h3>
     </div>
-  )
-}
+    </>
+  );
+};
