@@ -2,6 +2,7 @@ import Link from "next/link";
 import "./globals.css";
 import { ClerkProvider, UserButton, auth } from "@clerk/nextjs";
 import { sql } from "@vercel/postgres";
+import Header from '@/app/components/Header';
 import CreateProfile from "./components/CreateProfile";
 
 
@@ -30,14 +31,17 @@ export default async function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body>
-        <header>ALBUM REVIEWS</header>
+        <Header />
         <nav>
      <Link href ="/">HOME</Link> | <Link href ="/about">ABOUT</Link> | <Link href ="/profiles">PROFILES</Link> | {userId && <Link href={`/profiles/${profileRes.rows[0].id}/reviews`}>MY PROFILE</Link>}
    </nav>
         {!userId && <div><Link href="/sign-in">Sign In</Link>{children}</div>}
         {userId && <UserButton afterSignOutUrl="/" />}
         {userId && profileRes.rowCount === 0 && <CreateProfile />}
+        <div id="wrapper">
         {userId && profileRes.rowCount !== 0 && children}
+        </div>
+        
         <div>
      <footer>Property of Myles Artur Danny Reily &copy;</footer>
        </div>
