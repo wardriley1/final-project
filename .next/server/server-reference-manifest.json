@@ -3,20 +3,20 @@
     "a328bee6cd2d70c87489495c695e2b6a892bd671": {
       "workers": {
         "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fcomponents%2FCreateProfile.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!",
+        "app/about/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fcomponents%2FCreateProfile.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!",
         "app/profiles/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fcomponents%2FCreateProfile.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!",
-        "app/profiles/[profilesId]/reviews/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fprofiles%2F%5BprofilesId%5D%2Freviews%2Fpage.js%22%2C%5B%22%24%24ACTION_0%22%2C%22%24%24ACTION_1%22%5D%5D%2C%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fcomponents%2FCreateProfile.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!",
-        "app/about/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fcomponents%2FCreateProfile.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!"
+        "app/profiles/[profilesId]/reviews/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fcomponents%2FCreateProfile.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fprofiles%2F%5BprofilesId%5D%2Freviews%2Fpage.js%22%2C%5B%22%24%24ACTION_0%22%2C%22%24%24ACTION_1%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
         "app/page": "rsc",
+        "app/about/page": "rsc",
         "app/profiles/page": "rsc",
-        "app/profiles/[profilesId]/reviews/page": "rsc",
-        "app/about/page": "rsc"
+        "app/profiles/[profilesId]/reviews/page": "rsc"
       }
     },
     "8619060d6de4b50d93fe8438414db3f616ed9b65": {
       "workers": {
-        "app/profiles/[profilesId]/reviews/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fprofiles%2F%5BprofilesId%5D%2Freviews%2Fpage.js%22%2C%5B%22%24%24ACTION_0%22%2C%22%24%24ACTION_1%22%5D%5D%2C%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fcomponents%2FCreateProfile.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!"
+        "app/profiles/[profilesId]/reviews/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fcomponents%2FCreateProfile.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fprofiles%2F%5BprofilesId%5D%2Freviews%2Fpage.js%22%2C%5B%22%24%24ACTION_0%22%2C%22%24%24ACTION_1%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
         "app/profiles/[profilesId]/reviews/page": "rsc"
@@ -24,7 +24,7 @@
     },
     "dfd681810071b1dd66069e6852e6975a510f5803": {
       "workers": {
-        "app/profiles/[profilesId]/reviews/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fprofiles%2F%5BprofilesId%5D%2Freviews%2Fpage.js%22%2C%5B%22%24%24ACTION_0%22%2C%22%24%24ACTION_1%22%5D%5D%2C%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fcomponents%2FCreateProfile.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!"
+        "app/profiles/[profilesId]/reviews/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fcomponents%2FCreateProfile.js%22%2C%5B%22%24%24ACTION_0%22%5D%5D%2C%5B%22%2Fhome%2Fdtb%2Fbootcamp%2Ffinal-week%2Frileys%2Ffinal-project%2Fsrc%2Fapp%2Fprofiles%2F%5BprofilesId%5D%2Freviews%2Fpage.js%22%2C%5B%22%24%24ACTION_0%22%2C%22%24%24ACTION_1%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
         "app/profiles/[profilesId]/reviews/page": "rsc"
@@ -32,5 +32,5 @@
     }
   },
   "edge": {},
-  "encryptionKey": "Jm+rAW7vHnqg99DQD0LnF77kY0ErE/HWG0cEw0B7bE4="
+  "encryptionKey": "YgEKTDDgfJWr0aEeGfbGooI0m+s0gkSPBsU+y8OHckU="
 }

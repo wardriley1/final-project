@@ -31,15 +31,18 @@ export default async function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body>
-        <Header />
-        <nav>
-     <Link href ="/">HOME</Link> | <Link href ="/about">ABOUT</Link> | <Link href ="/profiles">PROFILES</Link> | {userId && <Link href={`/profiles/${profileRes.rows[0].id}/reviews`}>MY PROFILE</Link>}
-   </nav>
-        {!userId && <div><Link href="/sign-in">Sign In</Link>{children}</div>}
-        {userId && <UserButton afterSignOutUrl="/" />}
-        {userId && profileRes.rowCount === 0 && <CreateProfile />}
-        <div id="wrapper">
-        {userId && profileRes.rowCount !== 0 && children}
+          <Header />
+
+          <div id="wrapper">
+          <nav>
+            <Link href ="/">HOME</Link> | <Link href ="/about">ABOUT</Link> | <Link href ="/profiles">PROFILES</Link> | {userId && <Link href={`/profiles/${profileRes.rows[0].id}/reviews`}>MY PROFILE</Link>}
+          </nav>
+          {!userId && <div><Link href="/sign-in">Sign In</Link>{children}</div>}
+          {userId && <UserButton afterSignOutUrl="/" />}
+          {userId && profileRes.rowCount === 0 && <CreateProfile />}
+          <br/><br/>
+          
+          {userId && profileRes.rowCount !== 0 && children}
         </div>
         
         <div>
