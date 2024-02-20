@@ -34,8 +34,8 @@ export default async function ProfilePage({ params }) {
     
         await sql`UPDATE profiles SET username = ${username}, bio = ${bio} WHERE clerk_user_id = ${userId}`;
         revalidatePath(`/profiles`);
-        revalidatePath(`/profiles/${params.profileId}/reviews`);
-        redirect(`/profiles/${params.profileId}/reviews`);
+        revalidatePath(`/profiles/${params.profilesId}/reviews`);
+        redirect(`/profiles/${params.profilesId}/reviews`);
       }
 
 
