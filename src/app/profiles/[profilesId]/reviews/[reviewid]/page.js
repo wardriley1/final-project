@@ -30,12 +30,17 @@ export default async function SingleReview({ params }) {
   
     return (
         <div>
-            <h3>{review.rows[0].album_title}</h3>
+          <div className="albumContainer">
+            <img src={review.rows[0].album_image_url} />
+            <h3>{review.rows[0].album_name}</h3>
             <h4>{review.rows[0].album_artist}</h4>
             <h6>{review.rows[0].album_score}</h6>
             <h4>{review.rows[0].album_review}</h4>
+            <Link href={`${review.rows[0].spotify_link}`}>Play this album</Link>
+            <br />
+            </div>
 
-            {userId === review.rows[0].user_id  && <Link href={`/profiles/${params.profilesId}/reviews/${params.reviewid}/edit`}>Edit</Link>}
+            {userId === review.rows[0].user_id  && <Link href={`/profiles/${params.profilesId}/reviews/${params.reviewid}/edit`}>Edit Review</Link>}
 
         {userId && <form action={handleAddComment}>
             <h4>Add a comment</h4>

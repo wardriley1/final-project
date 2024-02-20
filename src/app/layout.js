@@ -39,6 +39,7 @@ export default async function RootLayout({ children }) {
             
           <nav>
             <Link href ="/">HOME</Link> | <Link href ="/about">ABOUT</Link> | <Link href ="/profiles">PROFILES</Link> | {userId && profileRes.rowCount !== 0 && <Link href={`/profiles/${profileRes.rows[0].id}/reviews`}>MY PROFILE</Link>}
+            | <Link href="/create">CREATE REVIEW</Link>
           </nav>
           {!userId && <div><Link href="/sign-in">Sign In</Link>{children}</div>}
           {userId && <UserButton afterSignOutUrl="/" />}

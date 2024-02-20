@@ -1,7 +1,5 @@
-import { sql } from "@vercel/postgres";
-
 export default async function Home() {
-  const reviews = await sql`SELECT * FROM reviews`;
+
   return (
     <div>
     <h2>Home</h2>

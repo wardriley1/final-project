@@ -15,7 +15,7 @@ export const metadata = {
 
 export default async function ProfilePage({ params }) {
     const {userId} = auth();
-
+    
     const profile = await sql `
     SELECT * FROM profiles WHERE id = ${params.profilesId}
     `;
@@ -41,8 +41,7 @@ export default async function ProfilePage({ params }) {
 
       async function handleCreateReview(formData) {
         "use server";
-        const album_title = formData.get("album_title");
-        const album_artist = formData.get("album_artist");
+        
         const album_score = formData.get("album_score");
         const album_review = formData.get("album_review");
 
@@ -82,24 +81,25 @@ export default async function ProfilePage({ params }) {
                 )}
                 
                  <h1>Reviews by {profile.rows[0].username}</h1>
-      {userId === profile.rows[0].clerk_user_id && (<form action={handleCreateReview}>
+      {/* {userId === profile.rows[0].clerk_user_id && (<form action={handleCreateReview}>
         <h4>Add a new review</h4>
         <input name="album_title" placeholder="Ablum Title" />
         <input name="album_artist" placeholder="Ablum Title" />
         <input name="album_score" placeholder="Ablum Score" />
-        <textarea name="album_review" placeholder="Review" ></textarea>
-        <CreateReviewBtn/>
-      </form>)}
-      {!userId && <div><h2>Please... Sign in to add reviews</h2></div>}
+        <textarea name="album_review" placeholder="Review" ></textarea> */}
+        {/* <CreateReviewBtn/> */}
+      {/* </form>)}
+      {!userId && <div><h2>Please... Sign in to add reviews</h2></div>} */}
      
       <div>
   <h1>Reviews</h1>
   {reviews.rows.map((review) => (
     <div key={review.id} id="rev-div">
-      <p>ALBUM TITLE:</p>
-      <h3>{review.album_title}</h3>
+      <p>ALBUM NAME:</p>
+      <h3>{review.album_name}</h3>
       <p>ALBUM ARTIST:</p>
       <h3>{review.album_artist}</h3>    
+      <img src={review.album_image_url} />
       <Link href={`/profiles/${params.profilesId}/reviews/${review.id}`}>
     <h3>Read Review ...</h3>
     </Link>
