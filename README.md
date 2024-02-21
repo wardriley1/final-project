@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Album Reviews
 
-## Getting Started
+Click here to visit the deployed page: (https://)
 
-First, run the development server:
+## Names of the team members
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Danny Brien
+- Artur Ciecierski
+- Riley Ward
+- Myles Billington
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+_n.b. Throughout the project we both pair programmed and mob programmed, so the commits made to this project may not necessarily represent what code we have worked on i.e. sometimes we may have been a driver, sometimes a navigator and sometimes a solo programmer._
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## A description of the project
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+An Album Review app, suitable for users who are interested not only music, but the forgotten art of the entire album. Users can access the main app and view profiles without signing up/logging on, however, upon logging in they can make a profile (if they havent already signed up), edit their profile name or bio, create reviews and save them to their profile and view other profiles reviews/comment on them.
 
-## Learn More
+## The overall problem domain and how the project solves those problems
 
-To learn more about Next.js, take a look at the following resources:
+Individuals who are interested in music/albums and other peoples opinions need an easy to use, approachable app where they can:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Create a profile and save album reviews to it
+- View other users profiles and reviews, allowing them to comment on them
+- Have access to an about page that explains how to use the app, should it not be clear
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+We solved these problems by:
 
-## Deploy on Vercel
+- Having a ‘Create Profile’ page upon signing in with clerk authorisation where users can create a profile with a username and bio
+- Having a 'My Profile' link in the navbar upon sign in where a user can edit their profile username/bio and add album reviews to their page via a form. Existing reviews are then listed, allowing to click on them and see the content of the review in full
+- Having a 'Profiles' page available to view, with all current users displayed by a call to the database. You can click on specific profile to view its existing reviews
+- Having a comment form below each specific review, which allows you to add comments to it
+- Having an 'About' page that explains the functionality of the app, including links embedded so a user can interact with it
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## A list of any libraries, frameworks, or packages that your application requires in order to properly function
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Clerk Authorization and Authentication: (https://clerk.com/)
+- Next.js: (https://nextjs.org/)
+- Vercel: (https://vercel.com/)
+- Vercel Postgres: (https://vercel.com/docs/storage/vercel-postgres)
+
+## Instructions that the user may need to follow in order to get your application up and running on their own computer
+
+We would recommend that you open this app on your PC as this is how it was originally designed. You can also access the app via a phone, media queries have made it possible for the app to scale for modern use.
+
+## Accessibility
+
+Please contact one of the project contributors if you would like a screenshot of our lighthouse report
+
+## Clearly defined database schemas
+
+These can be found in the file ‘seed.sql’
+
+## References
+
+<!-- Dont have any yet (I dont think)>
+<!-- - Google icons (https://fonts.google.com/icons)
+- Google fonts (we recognise that there is a GDPR issue surrounding google fonts and in the future we could revisit this area to improve the app from a data perspective) (https://fonts.google.com/)
+- Favicon generator: (https://realfavicongenerator.net/) -->
+
+# We’d like to thank:
+
+- The team at Tech Educators (https://techeducators.co.uk/) for their fantastic and constant support
+- Google and ChatGPT for the plethora of information that helped guide our project
