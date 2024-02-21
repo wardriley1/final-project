@@ -3,7 +3,6 @@ import "./globals.css";
 import { ClerkProvider, UserButton, auth } from "@clerk/nextjs";
 import { sql } from "@vercel/postgres";
 import Header from '@/app/components/Header';
-import TopMenu from '@/app/components/TopMenu';
 import CreateProfile from "./components/CreateProfile";
 
 
@@ -35,8 +34,6 @@ export default async function RootLayout({ children }) {
           <Header />
 
           <div id="wrapper">
-            <TopMenu />
-            
           <nav>
             <Link href ="/">HOME</Link> | <Link href ="/about">ABOUT</Link> | <Link href ="/profiles">PROFILES</Link> | {userId && profileRes.rowCount !== 0 && <Link href={`/profiles/${profileRes.rows[0].id}/reviews`}>MY PROFILE</Link>}
           </nav>
