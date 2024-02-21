@@ -1,5 +1,13 @@
 {
+  "/_not-found": "app/_not-found.js",
+  "/about/page": "app/about/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js",
+  "/profiles/[profilesId]/reviews/[reviewid]/comments/[commentid]/edit/page": "app/profiles/[profilesId]/reviews/[reviewid]/comments/[commentid]/edit/page.js",
+  "/profiles/[profilesId]/reviews/[reviewid]/edit/page": "app/profiles/[profilesId]/reviews/[reviewid]/edit/page.js",
+  "/profiles/[profilesId]/reviews/[reviewid]/page": "app/profiles/[profilesId]/reviews/[reviewid]/page.js",
   "/profiles/page": "app/profiles/page.js",
+  "/sign-in/[[...sign-in]]/page": "app/sign-in/[[...sign-in]]/page.js",
+  "/sign-up/[[...sign-up]]/page": "app/sign-up/[[...sign-up]]/page.js",
   "/profiles/[profilesId]/reviews/page": "app/profiles/[profilesId]/reviews/page.js"
 }
