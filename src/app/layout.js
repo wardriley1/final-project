@@ -23,8 +23,8 @@ export default async function RootLayout({ children }) {
   // there is no clerk id in query results. (Vercel server app crashes).
   // I inserted my clerk_id into the table via a temporary update SQL statement
   // with my credentials(just here).
-  const profileRes =
-    await sql`SELECT * FROM profiles WHERE clerk_user_id = ${userId}`;
+  // const profileRes =
+  //   await sql`SELECT * FROM profiles WHERE clerk_user_id = ${userId}`;
 
 
   return (
@@ -35,14 +35,14 @@ export default async function RootLayout({ children }) {
 
           <div id="wrapper">
           <nav>
-            <Link href ="/">HOME</Link> | <Link href ="/about">ABOUT</Link> | <Link href ="/profiles">PROFILES</Link> | {userId && profileRes.rowCount !== 0 && <Link href={`/profiles/${profileRes.rows[0].id}/reviews`}>MY PROFILE</Link>}
+            {/* <Link href ="/">HOME</Link> | <Link href ="/about">ABOUT</Link> | <Link href ="/profiles">PROFILES</Link> | {userId && profileRes.rowCount !== 0 && <Link href={`/profiles/${profileRes.rows[0].id}/reviews`}>MY PROFILE</Link>} */}
           </nav>
           {!userId && <div><Link href="/sign-in">Sign In</Link>{children}</div>}
           {userId && <UserButton afterSignOutUrl="/" />}
-          {userId && profileRes.rowCount === 0 && <CreateProfile />}
+          {/* {userId && profileRes.rowCount === 0 && <CreateProfile />} */}
           <br/><br/>
           
-          {userId && profileRes.rowCount !== 0 && children}
+          {/* {userId && profileRes.rowCount !== 0 && children} */}
         </div>
         
         <div>
