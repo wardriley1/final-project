@@ -61,30 +61,32 @@ export default function Form() {
 
     return(
         <div>
-            <div>
-            <form onChange={event => setSearchInput(event.target.value)} onSubmit={search}>
-                <input placeholder="Search For Artist" type="input" />
-            </form>
-            <button onClick={search}>Button</button>
-            </div>
-            <div>
-                <h2>Available Albums:</h2>
-                <ul>
-                    {albums.map( (album) => {
-                      return (
-                        <div className="albumContainer" key={album.id}>
-                        <img src={`${album.images[0].url}`} />
-                        <h3>{album.name}</h3>
-                        <Link href={`${album.external_urls.spotify}`}>Play</Link>
-                        <p>Artist: {album.artists[0].name}</p>
-                        <ReviewForm />
-                        <AddAlbum album={album}/>
-                        </div>
-                      )
-                    })}
-                </ul>
-            </div>
+        <div>
+        <form onChange={event => setSearchInput(event.target.value)} onSubmit={search}>
+            <input placeholder="Search For Artist" type="input" />
+        </form>
+        <button onClick={search}>Button</button>
         </div>
+        <div>
+            <h2>Available Albums:</h2>
+            <ul>
+                {albums.map( (album) => {
+                  return (
+                    <div className="albumContainer" key={album.id}>
+                    <div>
+                    <img src={`${album.images[0].url}`} />
+                    <h3>{album.name}</h3>
+                    <Link href={`${album.external_urls.spotify}`}>Play</Link>
+                    <p>Artist: {album.artists[0].name}</p>
+                    <ReviewForm />
+                    <AddAlbum album={album}/>
+                    </div>
+                    </div>
+                  )
+                })}
+            </ul>
+        </div>
+    </div>
     )
     
 }
