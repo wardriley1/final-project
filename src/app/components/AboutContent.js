@@ -4,7 +4,6 @@ import * as React from "react";
 import { motion } from "framer-motion"; // import motion variable //
 import Link from "next/link";
 
-
 export default function AboutContent() {
 
   return (
