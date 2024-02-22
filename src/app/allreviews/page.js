@@ -1,11 +1,12 @@
-import CreateReviewBtn from "@/app/components/CreateReviewBtn";
-import EditProfileBtn from "@/app/components/EditProfileBtn";
+/*
+- Lists all album reviews.
+- Provides sort order functionality through a dynamic button which toggles
+- text between sort ascending and sort order descending.
+*/
+
 import { auth } from "@clerk/nextjs";
 import { sql } from "@vercel/postgres";
-import { revalidatePath } from "next/cache";
 import Link from "next/link";
-import { redirect } from "next/navigation";
-
 
 
 export const metadata = {
@@ -15,8 +16,13 @@ export const metadata = {
 
 
 
-export default async function AllReviews({ params }) {
- const {userId} = auth();
+export default async function AllReviews({ params, searchParams }) {
+  const {userId} = auth();
+
+  let sortOrder = "desc"; 
+
+  // if the user has put ?sort=asc, change the sort order
+  if (searchParams.sort === "asc") sortOrder = "asc";
 
 
   // Fetch the user's profile
@@ -26,16 +32,18 @@ export default async function AllReviews({ params }) {
     WHERE id = ${params.profilesId}
   `;
 
-  // Fetch the user's reviews
-  const reviews = await sql `
-    SELECT * 
+  // SELECT JOIN query so that data from the profiles and reviews table can be
+  // shown. There is a naming conflict, so aliases are used for id's 
+  const queryStr = `SELECT album_artist, album_title, album_score, album_review, username, 
+    reviews.id AS review_id, profiles.id AS prof_id
     FROM reviews
     INNER JOIN profiles
     ON reviews.user_id = profiles.clerk_user_id
-    ORDER BY reviews.id desc
-  `;
+    ORDER BY album_score ${sortOrder}, album_title`;
 
-  console.log(reviews);
+  const reviews = await sql.query(queryStr); 
+
+
   // Takes the text of the review and truncates it so that
   // there is a standard maximum string length. This improves the uniformity
   // of layout as no review instance in this page can be gamed to show a huge 
@@ -52,29 +60,37 @@ export default async function AllReviews({ params }) {
      
         {userId && <div>
         <div>
-          <br/>
-          <h4>Reviews</h4>
-          {reviews.rows.map((review) => (
-            <div key={review.id} className="rev-compact">
-            <p>ALBUM:</p>
-            <h3>{review.album_title} - {review.album_artist}</h3><br/>
-            <p>REVIEW:</p>
-            <p>{truncateText(review.album_review)}</p>
-            <Link href={`/profiles/${params.profilesId}/reviews/${review.id}`}>
-              <button className="review">Read Full Review</button>
-            </Link>
-            <p>REVIEWER:</p>
-            <h3>{review.username}</h3>
+        
+          <h2>Reviews</h2>
 
-          </div>
+          {searchParams.sort ==="desc" && <Link href="/allreviews/?sort=asc"><button className="review">Sort: Lowest Score First</button></Link>}
+          {searchParams.sort ===undefined && <Link href="/allreviews/?sort=asc"><button className="review">Sort: Lowest Score First</button></Link>}
+          {searchParams.sort ==="asc" && <Link href="/allreviews/?sort=desc"><button className="review">Sort: Highest Score First</button></Link>}
+
+          {reviews.rows.map((review) => (
+            <div key={review.review_id} className="rev-compact">
+              
+              <p>SCORE:</p>
+              <h3>{review.album_score}</h3><br/>
+              <p>ALBUM:</p>
+              <h3>{review.album_title} - {review.album_artist}</h3><br/>
+              <p>REVIEW:</p>
+              <p>{truncateText(review.album_review)}</p>
+
+              <Link href={`/profiles/${review.prof_id}/reviews/${review.review_id}`}>
+                <button className="review">Read Full Review</button>
+              </Link>
+
+              <p>REVIEWER:</p>
+              <h3>{review.username}</h3>
+            </div>
           ))}
           <br/>
           <h4>Number of reviews: {reviews.rowCount}</h4>
         </div>
-        </div>}
-      </div>
+      </div>}
+    </div>
   </>
   )
 
 }
-
