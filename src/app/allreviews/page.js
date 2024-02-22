@@ -15,7 +15,8 @@ export const metadata = {
 
 
 export default async function AllReviews({ params }) {
-  const {userId} = auth();
+ const {userId} = auth();
+
 
   // Fetch the user's profile
   const profile = await sql `
@@ -33,7 +34,7 @@ export default async function AllReviews({ params }) {
     ORDER BY reviews.id desc
   `;
 
-
+  console.log(reviews);
   // Takes the text of the review and truncates it so that
   // there is a standard maximum string length. This improves the uniformity
   // of layout as no review instance in this page can be gamed to show a huge 
