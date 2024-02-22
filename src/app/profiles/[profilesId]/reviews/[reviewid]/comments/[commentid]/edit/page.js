@@ -30,20 +30,26 @@ export default async function EditComment({ params }) {
 
   return (
     <div>
-      <form action={handleEditComment}>
-        <h3>Edit Comment</h3>
+      <form action={handleEditComment} className="rev-form">
+        <h3 className="rev">Edit Comment</h3>
+        <label className="rev">User: </label><br/>
         <input
+          className="rev"
           name="username"
           placeholder="Username"
           defaultValue={profile.rows[0].username}
           value={profile.rows[0].username} 
           readOnly
-        />
-        <textarea
-          name="content"
-          placeholder="Content"
-          defaultValue={comment.rows[0].content}
+        /><br/><br/>
+        <label className="rev">Comment: </label><br/>
+        <div className="wrap-textarea">
+          <textarea
+            className="text-max-wide"
+            name="content"
+            placeholder="Content"
+            defaultValue={comment.rows[0].content}
         ></textarea>
+        </div>
         <EditCommentBtn />
       </form>
     </div>

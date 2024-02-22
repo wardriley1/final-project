@@ -5,8 +5,8 @@ export default function EditProfileBtn() {
     const formStatus = useFormStatus();
 
     return (
-        <button type="submit" disabled={formStatus.pending}>
-            {formStatus.pending ? "Editing profile...": "Edit profile"}
+        <button type="submit" className="review dark" disabled={formStatus.pending}>
+            {formStatus.pending ? "Editing Profile...": "Edit Profile"}
         </button>
     );
 }
