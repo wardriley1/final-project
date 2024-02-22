@@ -89,6 +89,7 @@ footer {
 }
 
 
+
 /* Danny's extra css */
 
 h3.rev {
@@ -237,3 +238,42 @@ img.icon {
     background-color: olive;
   }
 } */
+
+.mb-about-container {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  padding: 2rem;
+  text-align: center;
+}
+
+.mb-about-container h2 {
+  color: bisque;
+}
+
+.mb-about-container h3 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: bisque;
+}
+
+.mb-about-container p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: bisque;
+}
+
+.mb-about-container a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(73, 73, 219);
+}
+
+.mb-about-container a:hover {
+  text-decoration: underline;
+}
+
+.barCode {
+  margin-left:66%;
+}
+
+

@@ -24,7 +24,8 @@ export default async function RootLayout({ children }) {
   // I inserted my clerk_id into the table via a temporary update SQL statement
   // with my credentials(just here).
   const profileRes =
-     await sql`SELECT * FROM profiles WHERE clerk_user_id = ${userId}`;
+    await sql`SELECT * FROM profiles WHERE clerk_user_id = ${userId}`;
+
 
 
   return (
@@ -32,6 +33,7 @@ export default async function RootLayout({ children }) {
       <html lang="en">
         <body>
           <Header />
+
           
           <div id="nav-wrapper">
             <nav>
@@ -53,6 +55,7 @@ export default async function RootLayout({ children }) {
             {userId && profileRes.rowCount === 0 && <CreateProfile />}
             {userId && profileRes.rowCount !== 0 && children}
           </div>
+
         <div>
      <footer>Property of Myles Artur Danny Reily &copy;</footer>
        </div>
