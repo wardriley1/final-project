@@ -1,3 +1,7 @@
+/// LAYOUT ///
+
+
+
 import Link from "next/link";
 import "./globals.css";
 import { ClerkProvider, UserButton, auth } from "@clerk/nextjs";
@@ -8,11 +12,8 @@ import CreateProfile from "./components/CreateProfile";
 
 
 
-
-
-
 export const metadata = {
-  title: "Album Reviews",
+  title: "RiffRater - HOME",
   description: "Album Reviews you can trust",
 };
 
@@ -36,6 +37,7 @@ export default async function RootLayout({ children }) {
 
           
           <div id="nav-wrapper">
+            
             <nav>
               <ul>
                 <li><Link href ="/">Home</Link></li>
@@ -48,16 +50,16 @@ export default async function RootLayout({ children }) {
               </ul>
             </nav>
           </div>
-          {/* {children} */}
+          
           <div id="wrapper">
             {userId && <UserButton afterSignOutUrl="/" />}
             <br/><br/>
             {userId && profileRes.rowCount === 0 && <CreateProfile />}
-            {userId && profileRes.rowCount !== 0 && children}
+            {userId && profileRes.rowCount !== 0}
           </div>
-
+          {children}
         <div>
-     <footer>Property of Myles Artur Danny Reily &copy;</footer>
+     <footer>Copyright: MARD Disc-cuss - Myles Artur Reily Danny &copy;</footer>
        </div>
         </body>
       </html>
