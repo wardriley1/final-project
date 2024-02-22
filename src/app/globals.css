@@ -325,3 +325,14 @@ img.icon {
   width: 1;
   height: 600px;
 }
+.names {
+  text-align: center;
+  background-color: aliceblue;
+  border: 3px solid black;
+  padding: 1rem;
+  margin-top: 4rem;
+  opacity: 70%;
+}
+.names h3 {
+  margin: 1rem 0;
+}
