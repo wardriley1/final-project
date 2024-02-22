@@ -1,4 +1,13 @@
+// HOME PAGE //
+
+
 import BackPicture from "./components/BackPicture"
+
+
+export const metadata = {
+  title: "RiffRater - HOME",
+};   
+
 
 
 export default async function Home() {

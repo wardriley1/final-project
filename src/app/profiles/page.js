@@ -3,6 +3,11 @@ import { sql } from "@vercel/postgres";
 import Link from "next/link";
 
 
+export const metadata = {
+  title: "RiffRater - PROFILES",
+};   
+
+
 export default async function Profiles() {
   const {userId} = auth();
   const profiles = await sql `
