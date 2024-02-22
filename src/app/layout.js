@@ -2,8 +2,8 @@ import Link from "next/link";
 import "./globals.css";
 import { ClerkProvider, UserButton, auth } from "@clerk/nextjs";
 import { sql } from "@vercel/postgres";
-import Header from '@/app/components/Header';
 import CreateProfile from "./components/CreateProfile";
+import Header from "./components/Header";
 
 
 
@@ -48,7 +48,6 @@ export default async function RootLayout({ children }) {
               </ul>
             </nav>
           </div>
-          {/* {children} */}
           <div id="wrapper">
             {userId && <UserButton afterSignOutUrl="/" />}
             <br/><br/>
@@ -57,7 +56,7 @@ export default async function RootLayout({ children }) {
           </div>
 
         <div>
-     <footer>Property of Myles Artur Danny Reily &copy;</footer>
+     <footer>Copyright: MARD Disc-cuss - Myles Artur Reily Danny &copy;</footer>
        </div>
         </body>
       </html>
