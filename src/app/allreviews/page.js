@@ -35,7 +35,7 @@ export default async function AllReviews({ params, searchParams }) {
   // SELECT JOIN query so that data from the profiles and reviews table can be
   // shown. There is a naming conflict, so aliases are used for id's 
   const queryStr = `SELECT album_artist, album_title, album_score, album_review, username, 
-    reviews.id AS review_id, profiles.id AS prof_id
+    reviews.id AS review_id, profiles.id AS prof_id, album_image
     FROM reviews
     INNER JOIN profiles
     ON reviews.user_id = profiles.clerk_user_id
@@ -74,12 +74,14 @@ export default async function AllReviews({ params, searchParams }) {
               <h3>{review.album_score}</h3><br/>
               <p>ALBUM:</p>
               <h3>{review.album_title} - {review.album_artist}</h3><br/>
+              <img src={"/images/" +review.album_image}/><br/><br/>
               <p>REVIEW:</p>
               <p>{truncateText(review.album_review)}</p>
+              
 
               <Link href={`/profiles/${review.prof_id}/reviews/${review.review_id}`}>
                 <button className="review">Read Full Review</button>
-              </Link>
+              </Link><br/><br/>
 
               <p>REVIEWER:</p>
               <h3>{review.username}</h3>
