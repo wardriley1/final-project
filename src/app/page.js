@@ -10,7 +10,6 @@ export default async function Home() {
      <h3>Reviews you can trust!</h3>
         <p>RiffRater! This is the only website which allows you to post about your favourite music albums</p>
         <p>You can now post your reviews and recommend tracks You love!</p>
-        
   </div>
 </div>
   )
