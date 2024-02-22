@@ -5,7 +5,7 @@ export default function CreateCommentBtn() {
     const formStatus = useFormStatus();
 
     return (
-        <button type="submit" disabled={formStatus.pending}>
+        <button type="submit" className="review dark" disabled={formStatus.pending}>
             {formStatus.pending ? "Creating comment...": "Create comment"}
         </button>
     );
