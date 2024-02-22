@@ -1,13 +1,3 @@
-// export default function Header(){
-
-//   return (
-//     <header>
-//       <h1 className="head">🎼 ♪ ♪ ♪ ♫ RiffRater ♫ ♪ ♪ ♪ 🎸</h1>
-//     </header>
-//   );
-
-// }
-
 // Header component //
 
 
