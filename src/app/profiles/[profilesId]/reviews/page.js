@@ -9,7 +9,7 @@ import { redirect } from "next/navigation";
 
 
 export const metadata = {
-  title: "Album Review | Reviews",
+  title: "RiffRater - USERs PROFILE",
   description: "Reviews made by users",
 };
 

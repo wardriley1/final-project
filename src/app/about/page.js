@@ -1,9 +1,12 @@
 import AboutContent from "../components/AboutContent"
 
+
+
 export const metadata = {
-    title: "Album Review | About",
-    description: "About albums reviews",
-  };
+    title: "RiffRater - ABOUT",
+};   
+
+
 
 export default function About() {
 
