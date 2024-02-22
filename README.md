@@ -1,6 +1,6 @@
 # Album Reviews
 
-Click here to visit the deployed page: (https://)
+Click here to visit the deployed page: (https://final-project-ten-alpha.vercel.app/)
 
 ## Names of the team members
 
@@ -34,7 +34,9 @@ We solved these problems by:
 ## A list of any libraries, frameworks, or packages that your application requires in order to properly function
 
 - Clerk Authorization and Authentication: (https://clerk.com/)
+- Framer Motion: (https://www.framer.com/motion/)
 - Next.js: (https://nextjs.org/)
+- Spotify Web Api: (https://developer.spotify.com/)
 - Vercel: (https://vercel.com/)
 - Vercel Postgres: (https://vercel.com/docs/storage/vercel-postgres)
 
@@ -52,12 +54,9 @@ These can be found in the file ‘seed.sql’
 
 ## References
 
-<!-- Dont have any yet (I dont think)>
-<!-- - Google icons (https://fonts.google.com/icons)
-- Google fonts (we recognise that there is a GDPR issue surrounding google fonts and in the future we could revisit this area to improve the app from a data perspective) (https://fonts.google.com/)
-- Favicon generator: (https://realfavicongenerator.net/) -->
+-Animal emojis - (https://www.w3schools.com/charsets/ref_emoji_animals.asp)
 
 # We’d like to thank:
 
-- The team at Tech Educators (https://techeducators.co.uk/) for their fantastic and constant support
+- The lecturers and helpers at Tech Educators (https://techeducators.co.uk/), who went above and beyond to help us. Special shout to Joe, aswell as Tim and Jez. The goats
 - Google and ChatGPT for the plethora of information that helped guide our project
