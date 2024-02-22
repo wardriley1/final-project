@@ -9,9 +9,10 @@ import { redirect } from "next/navigation";
 
 
 export const metadata = {
-  title: "Album Review | Reviews",
+  title: "RiffRater - REVIEWS",
   description: "Reviews made by users",
 };
+
 
 
 export default async function AllReviews({ params }) {
