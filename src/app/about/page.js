@@ -9,12 +9,15 @@ import code from "../../../public/images/code.jpg"
 export default function About() {
 
     return(
+
             <div className="mb-about-container">
+
             <Image
             alt =""
             src={code}
             height={100} className="barCode" />
             <h2>About</h2>
+            <p>whatever</p>
             <h3>1. HOME</h3>
             <p>On the <Link href='/'>HOME</Link> page, you can view a little about us, and what our app is about.</p>
             <h3>2. Profiles</h3>
