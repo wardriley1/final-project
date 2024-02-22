@@ -277,6 +277,11 @@ img.icon {
 	padding: 2rem;
 }
 
+@media screen and (max-width: 768px) {
+  .cd {
+    flex-wrap: wrap;
+  }
+}
 
 
 .cd img {
@@ -317,7 +322,6 @@ img.icon {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  
+  width: 1;
   height: 600px;
 }

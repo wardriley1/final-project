@@ -1,9 +1,11 @@
 import AboutContent from "../components/AboutContent"
 
 
+
 export const metadata = {
     title: "RiffRater - ABOUT",
 };   
+
 
 
 export default function About() {
@@ -29,7 +31,7 @@ export default function About() {
     //                 <img src="https://www.theaudiodb.com/images/media/album/3dthumb/rxlw021599542173.png" alt="Front cover Aphex" className="front"/>
     //                 <img src="https://www.theaudiodb.com/images/media/album/3dthumb/owztti1605169108.png" alt="Front cover Fleetwood" className="front"/>
     //                 <img src="https://www.theaudiodb.com/images/media/album/3dthumb/axamtw1667218416.png" alt="Front cover Beatles" className="front"/>
-    //                 <img src="https://www.theaudiodb.com/images/media/album/3dthumb/z7hcnk1639141383.png" alt="Front cover Beach Boys" className="front"/>
+    //                 <img src="https://www.theaudiodb.com/images/media/album/3dthumb/z7hcnk1639141383.pnggit pull" alt="Front cover Beach Boys" className="front"/>
     //         </div>
     //     </div>
  )
