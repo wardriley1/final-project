@@ -210,8 +210,10 @@ a:link, a:visited, a:hover, a:active {
   color: #eaeaea;
 }
 
-img.icon {
+img.cover {
   vertical-align: bottom;
+  width: 200px;
+  height: 200px;
   margin: 0;
   padding: 0;
 }
