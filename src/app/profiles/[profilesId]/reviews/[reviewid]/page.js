@@ -3,7 +3,7 @@ import { auth } from "@clerk/nextjs";
 import { sql } from "@vercel/postgres";
 import { revalidatePath } from "next/cache";
 import Link from "next/link";
-
+import OutputCoverArt from "@/app/components/OutputCoverArt";
 
 export default async function SingleReview({ params }) {
     const {userId} = auth();
@@ -33,7 +33,12 @@ export default async function SingleReview({ params }) {
             <h3 className="title">ALBUM ARTIST:</h3> 
             <p className="content">{review.rows[0].album_artist}</p><br/>
             <h3 className="title">ALBUM SCORE:</h3> 
-            <p className="content">{review.rows[0].album_score}</p><br/>
+            <p className="content">{review.rows[0].album_score}</p>
+            <OutputCoverArt 
+                image_name={review.rows[0].album_image} 
+                altTitle={review.rows[0].album_title}
+                altArtist={review.rows[0].album_artist}
+              />
             <h3 className="title">ALBUM REVIEW:</h3><br/>
             <p className="content">{review.rows[0].album_review}</p><br/>
 

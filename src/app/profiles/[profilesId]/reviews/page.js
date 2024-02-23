@@ -1,5 +1,6 @@
 import CreateReviewBtn from "@/app/components/CreateReviewBtn";
 import EditProfileBtn from "@/app/components/EditProfileBtn";
+import OutputCoverArt from "@/app/components/OutputCoverArt";
 import { auth } from "@clerk/nextjs";
 import { sql } from "@vercel/postgres";
 import { revalidatePath } from "next/cache";
@@ -179,7 +180,14 @@ export default async function ProfilePage({ params }) {
       <p>ALBUM TITLE:</p>
       <h3>{review.album_title}</h3><br/>
       <p>ALBUM ARTIST:</p>
-      <h3>{review.album_artist}</h3><br/>
+      <h3>{review.album_artist}</h3>
+
+      <OutputCoverArt 
+        image_name={review.album_image} 
+        altTitle={review.album_title}
+        altArtist={review.album_artist}
+      />
+
       <p>REVIEW:</p>
       <p>{truncateText(review.album_review)}</p>
       <Link href={`/profiles/${params.profilesId}/reviews/${review.id}`}>
