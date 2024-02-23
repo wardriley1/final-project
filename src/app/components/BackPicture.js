@@ -16,7 +16,7 @@ export default function BackPicture () { // START for BackPicure Function //
                 <div className="homeimage">
                     <img 
                         className="homebg"
-                        src="../../../public/images/notesagain.png"
+                        src="./images/notesagain.png"
                         alt="">
                     </img>
         </div>
