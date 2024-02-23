@@ -211,11 +211,16 @@ a:link, a:visited, a:hover, a:active {
 }
 
 img.cover {
-  vertical-align: bottom;
   width: 200px;
   height: 200px;
-  margin: 0;
+  /* margin: 50px; */
   padding: 0;
+}
+
+.cover-art-box {
+  height: 210px;
+  width: 220px;
+  margin: 20px auto;
 }
 
 #nav-wrapper {

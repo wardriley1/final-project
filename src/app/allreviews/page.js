@@ -7,6 +7,7 @@
 import { auth } from "@clerk/nextjs";
 import { sql } from "@vercel/postgres";
 import Link from "next/link";
+import OutputCoverArt from "../components/OutputCoverArt";
 
 
 export const metadata = {
@@ -73,10 +74,17 @@ export default async function AllReviews({ params, searchParams }) {
               <p>SCORE:</p>
               <h3>{review.album_score}</h3><br/>
               <p>ALBUM:</p>
-              <h3>{review.album_title} - {review.album_artist}</h3><br/>
-              <img src={"/images/" +review.album_image}/><br/><br/>
+              <h3>{review.album_title} - {review.album_artist}</h3>
+              
+              <OutputCoverArt 
+                image_name={review.album_image} 
+                altTitle={review.album_title}
+                altArtist={review.album_artist}
+              />
+
               <p>REVIEW:</p>
               <p>{truncateText(review.album_review)}</p>
+              
               
 
               <Link href={`/profiles/${review.prof_id}/reviews/${review.review_id}`}>
