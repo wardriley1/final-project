@@ -23,6 +23,8 @@ export default async function SingleReview({ params }) {
     const comments = await sql`SELECT * FROM comments where review_id = ${params.reviewid} ORDER BY id asc`;
     const currentUsername = await sql`SELECT username FROM profiles where clerk_user_id = ${userId} `;
 
+    console.log(review);
+
     async function handleAddComment(formData) {
         "use server";
         const username = formData.get("username");
