@@ -2,6 +2,7 @@
 
 // Importing below //
 
+
 "use client"
 import * as React from "react";
 import { motion } from "framer-motion"; // import motion variable //
@@ -16,7 +17,7 @@ export default function BackPicture () { // START for BackPicure Function //
                 <div className="homeimage">
                     <img 
                         className="homebg"
-                        src="../../../public/images/notesagain.png"
+                        src="./images/notesagain.png"
                         alt="">
                     </img>
         </div>
