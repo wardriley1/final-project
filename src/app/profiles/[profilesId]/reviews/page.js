@@ -1,3 +1,15 @@
+/*
+  This page carries out the following:  
+- outputs the user's profile
+- allows editing of the user's profile
+- allows the user to create a new review
+- Displays existing reviews made by the user
+
+  It is accessed by the URL '/profiles/<user id>/reviews'
+*/
+
+
+
 import CreateReviewBtn from "@/app/components/CreateReviewBtn";
 import EditProfileBtn from "@/app/components/EditProfileBtn";
 import OutputCoverArt from "@/app/components/OutputCoverArt";
@@ -33,7 +45,6 @@ export default async function ProfilePage({ params }) {
     ORDER BY id desc
   `;
 
-  //console.log(reviews); 
 
   async function handleEditProfile(formData) {
     "use server";
@@ -171,7 +182,7 @@ export default async function ProfilePage({ params }) {
 
   {!userId && <div><h2>Please... Sign in to add reviews</h2></div>}
      
-  <div> {/* ??? */}
+  <div> 
   
   <br/>
   <h4>Reviews</h4>

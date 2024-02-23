@@ -1,3 +1,12 @@
+/*
+  This page outputs all user profiles.
+  By clicking on a profile, the user is powered by the magic of internetness
+  to that user's particular profile page.
+
+  It is accessed by the URL '/profiles'
+*/
+
+
 import { auth } from "@clerk/nextjs";
 import { sql } from "@vercel/postgres";
 import Link from "next/link";

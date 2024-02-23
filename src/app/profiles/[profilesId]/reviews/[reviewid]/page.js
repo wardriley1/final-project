@@ -1,3 +1,14 @@
+/*
+  This page displays the selected album review and allows
+  the user to add a comment.
+
+  If the review belongs to the current user, it displays an edit button to
+  allow the user to edit it.
+
+  It is accessed by the URL '/profiles/<user id>/reviews/<review id>'
+*/
+
+
 import CreateCommentBtn from "@/app/components/CreateCommentBtn";
 import { auth } from "@clerk/nextjs";
 import { sql } from "@vercel/postgres";

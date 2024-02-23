@@ -1,3 +1,14 @@
+/*
+  This page allows
+  the user to edit a comment they have previously made.
+
+  If the review belongs to the current user, it displays an edit button to
+  allow the user to edit it.
+
+  It is accessed by the URL '/profiles/<user id>/reviews/<review id>/comments/<comment id>/edit'
+  
+*/
+
 import EditCommentBtn from "@/app/components/EditCommentBtn";
 import { auth } from "@clerk/nextjs";
 import { sql } from "@vercel/postgres";
