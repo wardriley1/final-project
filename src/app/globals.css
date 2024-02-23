@@ -9,11 +9,7 @@ body {
   font-family: system-ui;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(
-    330deg,
-    hsl(0, 0%, 100%) 0%,
-    hsl(260, 8%, 85%) 100%
-  );
+  background-color: bisque;
 }
 
 svg {
