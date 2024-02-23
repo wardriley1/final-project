@@ -47,7 +47,7 @@ export default async function AllReviews({ params, searchParams }) {
 
   const reviews = await sql.query(queryStr); 
 
-//console.log(reviews);
+ 
 
 
   // Takes the text of the review and truncates it so that
