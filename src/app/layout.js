@@ -6,11 +6,6 @@ import CreateProfile from "./components/CreateProfile";
 import Header from "./components/Header";
 
 
-
-
-
-
-
 export const metadata = {
   title: "Album Reviews",
   description: "Album Reviews you can trust",
@@ -19,13 +14,9 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const { userId } = auth();
 
-  // If a new user tries to authentcate through GitHub, the code crashes as
-  // there is no clerk id in query results. (Vercel server app crashes).
-  // I inserted my clerk_id into the table via a temporary update SQL statement
-  // with my credentials(just here).
   const profileRes =
-    await sql`SELECT * FROM profiles WHERE clerk_user_id = ${userId}`;
-
+    await sql`SELECT * FROM profiles 
+      WHERE clerk_user_id = ${userId}`;
 
 
   return (

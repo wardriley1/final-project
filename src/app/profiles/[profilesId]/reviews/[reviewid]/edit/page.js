@@ -1,3 +1,11 @@
+/*
+  This page allows the user to edit a review they have previously made.
+
+  Accessed via URL: /profiles/<user id>/reviews/<review id>/edit
+
+*/
+
+
 import EditReviewBtn from "@/app/components/EditReviewBtn";
 import { auth } from "@clerk/nextjs";
 import { sql } from "@vercel/postgres";

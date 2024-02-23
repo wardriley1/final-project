@@ -1,7 +1,10 @@
 /*
-- Lists all album reviews.
-- Provides sort order functionality through a dynamic button which toggles
-- text between sort ascending and sort order descending.
+  This page lists all album reviews.
+  It provides sort order functionality through a dynamic button which toggles
+  between sort ascending and sort order descending, changing the text on the 
+  button accordingly.
+
+  Accessed via the URL: '/allreviews'
 */
 
 import { auth } from "@clerk/nextjs";
